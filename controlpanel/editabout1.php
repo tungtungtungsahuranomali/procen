@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
   if(!empty(trim($judulhotel))){
     if(!empty(trim($deskripsihotel))){
       if(move_uploaded_file($tmpgambar, $path)){
-        $insertdata = "UPDATE about set judul_about = '$judulhotel', deskripsi_about = '$deskripsihotel', gambar_about = 'http://192.168.30.4/controlpanel/images/picabout/$gambarhotel' WHERE id_about = '$getidhotel'";
+        $insertdata = "UPDATE about set judul_about = '$judulhotel', deskripsi_about = '$deskripsihotel', gambar_about = '/images/picabout/$gambarhotel' WHERE id_about = '$getidhotel'";
         $connect = mysqli_query($koneksi, $insertdata);
         if($connect){
           header("location:about.php");

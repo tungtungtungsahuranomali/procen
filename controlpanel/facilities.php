@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
   $storage = $_FILES['gambar']['tmp_name'];
   $kategori = $_POST['kategori'];
 
-  $insert = "INSERT INTO fasilitas set gambar = 'http://192.168.30.4/controlpanel/images/picfasilitas/$gambar', kategori = '$kategori'";
+  $insert = "INSERT INTO fasilitas set gambar = '/images/picfasilitas/$gambar', judul_gambar = '$gambar', kategori = '$kategori'";
 
   $connectinsert = mysqli_query($koneksi, $insert);
     if(move_uploaded_file($storage, "./images/picfasilitas/".$gambar)){

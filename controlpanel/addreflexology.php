@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
   $storage = $_FILES['gambar']['tmp_name'];
   $judulgambar = $_POST['judulgambar'];
 
-  $insert = "INSERT INTO reflexology set link_gambar = 'http://192.168.30.4/controlpanel/images/picreflexology/$gambar', judul_gambar = '$judulgambar'";
+  $insert = "INSERT INTO reflexology set link_gambar = '/images/picreflexology/$gambar', judul_gambar = '$judulgambar'";
   $connectinsert = mysqli_query($koneksi, $insert);
   if(!empty($gambar)){
     if(move_uploaded_file($storage, "./images/picreflexology/".$gambar)){

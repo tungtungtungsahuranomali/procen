@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
   $gambar = $_FILES['gambar']['name'];
   $storage = $_FILES['gambar']['tmp_name'];
 
-  $insert = "INSERT INTO service (link_gambar, judul_gambar) VALUES ('http://192.168.30.4/controlpanel/images/picservices/$gambar', '$gambar')";
+  $insert = "INSERT INTO service (link_gambar, judul_gambar) VALUES ('/images/picservices/$gambar', '$gambar')";
 
 //  $insert = "INSERT INTO service set link_gambar = 'http://192.168.30.4/controlpanel/images/picservices/$gambar'";
   $connectinsert = mysqli_query($koneksi, $insert);

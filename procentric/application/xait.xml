@@ -1,5 +1,5 @@
 <XAIT>
-	<versionNumber>214</versionNumber>
+	<versionNumber>215</versionNumber>
 	<AbstractService>
 		<svcName>Pro:Centric Application</svcName>
 		<svcId>0x1208</svcId>
@@ -16,13 +16,13 @@
 					<controlCode>AUTOSTART</controlCode>
 					<visibility>NOT_VISIBLE_USERS</visibility>
 					<priority>1</priority>
-					<version>214</version>
+					<version>215</version>
 				</applicationDescriptor>
 				<HcapDescriptor>
 					<frequency>1</frequency>
 					<programNum>8</programNum>
 					<cTag>8</cTag>
-					<url>http://192.168.30.4/procentric/application/OHAGB_0.24.zip</url>
+					<url>https://limit-sing-march-dried.trycloudflare.com/procentric/application/OHAGB_0.24.zip</url>
 					<applicationStructure>
 						<baseDirectory>/</baseDirectory>
 						<classpathExtension>/</classpathExtension>

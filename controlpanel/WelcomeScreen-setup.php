@@ -16,7 +16,7 @@ $connectdatabg = mysqli_query($koneksi, $databg);
 if(isset($_POST['submit'])){
   $storage = $_FILES['gambar']['tmp_name'];
   $nama_file = 'welcome.mp4'; 
-  $update = "UPDATE welcome_background set link_background = 'http://192.168.30.4/controlpanel/images/video/welcome.mp4' WHERE id = '0'";
+  $update = "UPDATE welcome_background set link_background = '/images/video/welcome.mp4' WHERE id = '0'";
   $connectupdate = mysqli_query($koneksi, $update);
   if(!empty($_FILES['gambar']['name'])){
     if(move_uploaded_file($storage, "./images/video/".$nama_file)){
@@ -134,7 +134,7 @@ if(isset($_POST['submit'])){
         </div>
         <div class="mb-3">
           <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-          <a class="btn btn-success" href="http://192.168.30.4/controlpanel/images/video/welcome.mp4" target="_blank">Preview</a>
+          <a class="btn btn-success" href="/images/video/welcome.mp4" target="_blank">Preview</a>
         </div>
       </form>
 		  </div>
