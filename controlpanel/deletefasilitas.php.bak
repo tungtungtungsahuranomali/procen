@@ -1,0 +1,19 @@
+<?php 
+
+include 'koneksi.php';
+
+session_start();
+
+$idfasilitasget = $_GET['idfasilitas'];
+
+$takedatafasilitas = "DELETE FROM fasilitas WHERE id_gambar = '$idfasilitasget'";
+$connecttakedatafasilitas = mysqli_query($koneksi, $takedatafasilitas);
+if($connecttakedatafasilitas){
+	header("location:facilities.php");
+}
+
+
+
+
+
+ ?>

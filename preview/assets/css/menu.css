@@ -1,0 +1,455 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 10, 2017, 11:01:34 AM
+    Author     : Hendrik
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 10, 2017, 11:02:43 AM
+    Author     : Hendrik
+*/
+@font-face {
+  font-family: vaground;
+  src: url(../fonts/VAGRoundedBT.ttf); }
+@font-face {
+  font-family: frutigerrom;
+  src: url(../fonts/FrutigerLTStd55Roman.ttf); }
+@font-face {
+  font-family: frutigerbold;
+  src: url(../fonts/FrutigerLTStd65Bold.ttf); }
+@font-face {
+  font-family: frutigerlight;
+  src: url(../fonts/FrutigerLTStd45Light.ttf); }
+@font-face {
+  font-family: tall;
+  src: url(../fonts/ap.ttf); }
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  /*width: 1280px;*/
+  height: 720px; }
+
+body {
+  background-image: url(tv:);
+  margin-left: 0;
+  margin-top: 0;
+  padding: 0;
+  font-family: frutigerrom;
+  font-size: 100%;
+  line-height: 1em;
+  color: #0;
+  text-align: center; }
+
+object {
+  outline: none; }
+
+input, textarea, select {
+  font-family: frutigerlight;
+  font-size: 1em;
+  vertical-align: middle;
+  font-weight: normal; }
+
+fieldset {
+  border: 0; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+img {
+  border: 0;
+  vertical-align: top;
+  text-align: left; }
+
+ul, ol {
+  list-style: none; }
+
+p {
+  line-height: 1.43em; }
+
+/* TXT, LINKS, LINES, TITLES */
+a {
+  outline: none;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+a:visited {
+  text-decoration: none;
+  color: white; }
+
+::-webkit-scrollbar {
+  width: 12px; }
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
+
+@font-face {
+  font-family: vaground;
+  src: url(../fonts/VAGRoundedBT.ttf); }
+@font-face {
+  font-family: frutigerrom;
+  src: url(../fonts/FrutigerLTStd55Roman.ttf); }
+body {
+  background-image: url("http://iptv.cic.net.id/hk/images/background.png");
+  background-position: left top;
+  background-repeat: no-repeat; }
+
+#menu_cont {
+  position: absolute;
+  bottom: 0px;
+  /*left: -450px;*/
+  left: 0px;
+  width: 350px;
+  background: #007363;
+  border-top-right-radius: 30px;
+  padding-left: 30px; }
+
+#menu_list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 1280px;
+  height: 130px;
+  font-family: vaground; }
+  #menu_list li {
+    position: relative;
+    float: left;
+    display: inline; }
+    #menu_list li a {
+      position: relative;
+      width: 100px;
+      height: 130px;
+      top: 0px;
+      display: block;
+      line-height: 210px;
+      text-decoration: none;
+      vertical-align: bottom;
+      color: white; }
+      #menu_list li a:focus {
+        background-color: #ffffff;
+        color: #333333;
+        border-radius: 10px;
+        font-size: 1.3em;
+        font-weight: bolder; }
+      #menu_list li a:hover:not(:focus) {
+        background-color: #555;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        font-weight: bolder; }
+
+#tv:hover:after, #tv:focus:after {
+  padding-right: 8px;
+  width: 75px;
+  height: 75px;
+  left: 10px; }
+#tv:after {
+  position: absolute;
+  content: "";
+  background-image: url("images/tv.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0px;
+  left: 5px;
+  width: 90px;
+  height: 90px; }
+
+#youtube:hover:after, #youtube:focus:after {
+  padding-right: 8px;
+  width: 75px;
+  height: 75px;
+  left: 10px; }
+#youtube:after {
+  position: absolute;
+  content: "";
+  background-image: url("images/youtube.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0px;
+  left: 5px;
+  width: 90px;
+  height: 90px; }
+
+#hotel-info:hover:after, #hotel-info:focus:after {
+  padding-right: 8px;
+  width: 75px;
+  height: 75px;
+  left: 10px; }
+#hotel-info:after {
+  position: absolute;
+  content: "";
+  background-image: url("images/hotelinfo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0px;
+  left: 5px;
+  width: 90px;
+  height: 90px; }
+
+#fnb:hover:after, #fnb:focus:after {
+  padding-right: 8px;
+  width: 75px;
+  height: 75px;
+  left: 10px; }
+#fnb:after {
+  position: absolute;
+  content: "";
+  background-image: url("images/fnb.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0px;
+  left: 5px;
+  width: 90px;
+  height: 90px; }
+
+#time {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  text-align: right;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  line-height: 2rem;
+  font-family: vaground; }
+
+#welcome_cont {
+  font-family: frutigerrom;
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  margin: 0px 25px;
+  width: 739px;
+  color: #007363;
+  text-shadow: 1px 2px 6px #442626;
+  text-align: center;
+  background-color: #ffffff;
+  border: 3px solid #007363;
+  border-radius: 10px; }
+
+#guest_name {
+  font-size: 3rem;
+  padding: 15px;
+  line-height: 3rem; }
+
+#room_name {
+  /*display: none;*/
+  font-size: 1.4rem;
+  padding: 15px;
+  line-height: 1.4rem; }
+
+#hotel_name {
+  /*display: none;*/
+  font-size: 2.3rem;
+  padding: 15px;
+  line-height: 2.3rem; }
+
+/*
+
+#menu_cont{
+    position: absolute;
+    bottom: 0px;
+    top: $space;
+    width: 540px;
+    background: #73AD21;
+    border-bottom-left-radius:  $space /3;
+    border-top-left-radius:  $space /3;
+}
+#menu_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 4.0rem;
+    font-size: 2.9rem;
+    font-weight: bold;
+    li{
+        display: block;
+        height: 80px;
+        text-align: right;
+        a {
+            text-decoration: none;
+            display: block;
+            overflow:hidden;
+            white-space: nowrap;
+            color: #ffffff;
+            height:80px;
+            min-width: 440px;
+            max-width:440px;
+            vertical-align: top;
+            -webkit-transition: max-width 2s;  Safari 
+            transition: max-width 2s;
+            padding-right:100px;
+            &:focus {
+                background-color: #ad2173;
+                color: yellow;
+                border-bottom-left-radius:  $space /3;
+                border-top-left-radius:  $space /3;
+            }
+            &:hover:not(:focus) {
+                background-color: #555;
+                color: white;
+                border-bottom-left-radius:  $space /3;
+                border-top-left-radius:  $space /3;
+            }
+        }
+    }
+}
+
+#tv{
+    
+    &:hover:after, &:focus:after {
+        padding-right: 8px;
+        background-position-y: -4px;
+    }
+    &:after{
+    position: absolute;
+    content: "";
+    background-image: url("images/tv.png") ;
+    background-repeat: no-repeat;
+    background-size:  cover;
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+    }
+}
+#youtube{
+    &:hover:after, &:focus:after{
+        padding-right: 8px;
+        background-position-y: -4px;
+    }
+    &:after{
+        position: absolute;
+        content: "";
+        background-image: url("images/youtube.png") ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 70px;
+        height: 70px;
+        margin-left: 10px;
+    }
+}
+#hotel-info{
+    &:hover:after,&:focus:after{
+        padding-right: 8px;
+        background-position-y: -4px;
+    }
+    &:after{
+        position: absolute;
+        content: "";
+        background-image: url("images/hotelinfo.png") ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 70px;
+        height: 70px;
+        margin-left: 10px;
+    }
+}
+#fnb{
+    &:hover:after,&:focus:after{
+        padding-right: 8px;
+        background-position-y: -4px;
+    }
+    &:after{
+        position: absolute;
+        content: "";
+        background-image: url("images/fnb.png") ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 70px;
+        height: 70px;
+        margin-left: 10px;
+    }
+}*/
+.fnb-container {
+  position: relative; }
+
+#left-side {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 485px;
+  height: 720px; }
+
+#right-side {
+  position: absolute;
+  top: 0px;
+  left: 485px;
+  width: 853.33333px;
+  height: 630px;
+  padding-top: 90px;
+  background-color: blue; }
+
+.upper-cont {
+  width: 485px;
+  height: 60px;
+  background-color: red; }
+
+.middle-cont {
+  position: absolute;
+  width: 485px;
+  height: 282px;
+  top: 60px;
+  overflow: hidden; }
+
+.bottom-cont {
+  position: absolute;
+  width: 485px;
+  /*total height - upper height - middle height*/
+  height: 378px;
+  top: 342px;
+  background-color: red; }
+
+.watch-tv {
+  position: relative;
+  margin: 30px auto;
+  width: 395px;
+  height: 222px;
+  box-shadow: 0 0 0 100px #ff0000;
+  /* !!! */ }
+
+.fnb-cat {
+  float: left;
+  background: yellow;
+  font-size: 2.5rem;
+  border-radius: 30px;
+  margin: 15px; }
+  .fnb-cat a {
+    text-decoration: none;
+    display: block;
+    padding: 30px; }
+    .fnb-cat a:focus {
+      background-color: green;
+      border-radius: 15px;
+      color: white; }
+    .fnb-cat a:hover:not(:focus) {
+      font-weight: bold; }
+
+#log {
+  position: absolute;
+  top: 30px;
+  display: inline;
+  text-align: center;
+  height: 100px;
+  line-height: 30px;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 10px; }
+
+/*# sourceMappingURL=menu.css.map */

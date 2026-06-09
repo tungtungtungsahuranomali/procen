@@ -1,0 +1,90 @@
+_25_bersih2
+
+hapus javascript yang gak perlu
+
+_26
+- fix bug channel auto hide, waktu dibuka gak balik ke channel yang lagi dibuka
+- fix channel per page navigation
+
+_27
+
+- optimize jquery based on http://code.tutsplus.com/tutorials/10-ways-to-instantly-increase-your-jquery-performance--net-5551
+- tambah foto dan loading untuk menutupi nama tamu yang sedang diload.
+- tambah pohon kelapa
+
+_28
+- bersih-bersih gambar dan js yang gak perlu
+HTML Objet Demo Application
+
+========================================================================
+VERSION: 1.7b 
+
+DATE OF RELEASE: 19 Jan 2012
+
+CHANGES IN THIS RELEASE:
+- System testing issues fixed
+
+
+========================================================================
+VERSION: 1.6a 
+
+DATE OF RELEASE: 23 Dec 2011
+
+CHANGES IN THIS RELEASE:
+- Included seven different assets folders, for which system testing 
+has been conducted
+
+
+========================================================================
+VERSION: 1.6 
+
+DATE OF RELEASE: 20 Dec 2011
+
+CHANGES IN THIS RELEASE:
+- Unit testing done and issues fixed
+
+Released Items:
+- Unit test report of HTML Objet App
+       HTML_ObjetApp_Unit_Test_Case_Report.xls
+- Unit test case files
+- Updated code
+
+========================================================================
+VERSION: 1.5 
+
+DATE OF RELEASE: 09 Dec 2011
+
+CHANGES IN THIS RELEASE:
+- Implemented Remote Help Screen
+- Implemented watch TV functionality
+- Added mouse navigation in Channel Guide
+
+========================================================================
+VERSION: 1.4 
+
+DATE OF RELEASE: 07 Dec 2011
+
+CHANGES IN THIS RELEASE:
+- Completed Informations page
+- Display of Channel Guide
+
+
+KNOWN ISSUES:
+- Mouse events not handled
+- Lossing focus when navigating on program guide
+========================================================================
+VERSION: 1.1 
+
+DATE OF RELEASE: 25 Nov 2011
+
+CHANGES IN THIS RELEASE:
+- Display of Informations page by pressing Enter on “Information” in the Menu
+- Display of Weather screen
+- Display of Attractions screen
+- Handling of key events
+
+KNOWN ISSUES:
+- Mouse events not handled
+
+========================================================================
+

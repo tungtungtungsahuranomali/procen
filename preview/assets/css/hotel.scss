@@ -1,0 +1,65 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 10, 2017, 11:01:34 AM
+    Author     : Hendrik
+*/
+@import 'default';
+
+$width: 1280px;
+$height: 720px;
+$space: 30px;
+$left-side: $width/3;
+$right-side: $width*2/3;
+$mini-width: 395px;
+$mini-height: 222px;
+$icon-width: 100px;
+$icon-height: 100px;
+body{
+    background: url("images/bg.jpg") #ffffff center no-repeat;
+}
+#image{
+    position: absolute;
+    width: $width;
+    height: $height;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom:0px;
+    background-position: center;
+    background-repeat: no-repeat; 
+   -moz-box-shadow:    inset 0px 0px 50px 10px rgba(0,0,0,0.5);
+   -webkit-box-shadow: inset 0px 0px 50px 10px rgba(0,0,0,0.5);
+   box-shadow:         inset 0px 0px 50px 10px rgba(0,0,0,0.5);
+}
+#nav{
+    position: absolute;
+    top: ($height/2) - ($icon-height/2);
+    width: $width;
+}
+#left{
+    float: left;
+    width: $icon-width;
+    height: $icon-height;
+    background-image: url('images/left.png');
+    &:active, &.active{
+       opacity:0.5 
+    }
+}
+#right{
+    float: right;
+    width: $icon-width;
+    height: $icon-height;
+    background-image: url('images/right.png');
+    &:active, &.active{
+        opacity:0.5 
+    }
+    
+}
+#log{
+    position:absolute;
+}
+

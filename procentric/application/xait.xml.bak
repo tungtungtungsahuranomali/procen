@@ -1,0 +1,35 @@
+<XAIT>
+	<versionNumber>104</versionNumber>
+	<AbstractService>
+		<svcName>Pro:Centric Application</svcName>
+		<svcId>0x1208</svcId>
+		<isAutoSelect>true</isAutoSelect>
+		<ApplicationList>
+			<Application>
+				<appName>OAKWOOD HOTEL AND APARTEMENT GRAND BATAM</appName>
+				<applicationIdentifier>
+					<orgId>8</orgId>
+					<appId>1</appId>
+				</applicationIdentifier>
+				<applicationDescriptor>
+					<type>Hcap-h</type>
+					<controlCode>AUTOSTART</controlCode>
+					<visibility>NOT_VISIBLE_USERS</visibility>
+					<priority>1</priority>
+					<version>104</version>
+				</applicationDescriptor>
+				<HcapDescriptor>
+					<frequency>1</frequency>
+					<programNum>8</programNum>
+					<cTag>8</cTag>
+					<url>http://192.168.30.112/procentric/application/OHAGB_0.2.zip</url>
+					<applicationStructure>
+						<baseDirectory>/</baseDirectory>
+						<classpathExtension>/</classpathExtension>
+						<initialClass>menu.html</initialClass>
+					</applicationStructure>
+				</HcapDescriptor>
+			</Application>
+		</ApplicationList>
+	</AbstractService>
+</XAIT>

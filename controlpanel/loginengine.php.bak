@@ -1,0 +1,54 @@
+<?php 
+
+include 'koneksi.php';
+
+session_start();
+
+if(isset($_POST['submit'])){
+	$username = $_POST['username'];
+	$password = sha1($_POST['password']);
+	
+	$takedataadmin = "SELECT * FROM user";
+	$connecttakedataadmin = mysqli_query($koneksi, $takedataadmin);
+
+	if(mysqli_num_rows($connecttakedataadmin)){
+		while($takedata = mysqli_fetch_array($connecttakedataadmin)){
+			$usernamedb = $takedata['username'];
+			$passworddb = $takedata['password'];
+		}
+
+
+
+		if(!empty(trim($username)) && !empty(trim($password))){
+			if($username == $usernamedb){
+				if($password == $passworddb){
+					$_SESSION['username'] = $usernamedb;
+					header("location:index.php");
+				}else{
+					?>
+					<script type="text/javascript">
+						alert("password salah");
+					</script>
+				<?php  	
+				}
+			}else{
+				?>	
+				<script type="text/javascript">
+					alert("username salah");
+				</script>
+
+			<?php 
+			}	
+		}else{
+			?>
+			<script type="text/javascript">
+				alert("username atau password tidak boleh kosong");
+			</script>
+
+			<?php 
+		}
+	}
+
+}
+
+ ?>

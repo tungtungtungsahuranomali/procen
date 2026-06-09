@@ -1,0 +1,531 @@
+@font-face {
+  font-family: vaground;
+  src: url(../fonts/VAGRoundedBT.ttf); }
+@font-face {
+  font-family: frutigerrom;
+  src: url(../fonts/FrutigerLTStd55Roman.ttf); }
+@font-face {
+  font-family: frutigerbold;
+  src: url(../fonts/FrutigerLTStd65Bold.ttf); }
+@font-face {
+  font-family: frutigerlight;
+  src: url(../fonts/FrutigerLTStd45Light.ttf); }
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  /*width: 1280px;*/
+  height: 720px;
+  font-size: 1rem; }
+
+body {
+  background-image: url(tv:);
+  margin-left: 0;
+  margin-top: 0;
+  padding: 0;
+  font-family: frutigerrom;
+  font-size: 100%;
+  line-height: 1em;
+  color: #0;
+  text-align: center; }
+
+object {
+  outline: none; }
+
+input, textarea, select {
+  font-family: frutigerlight;
+  font-size: 1em;
+  vertical-align: middle;
+  font-weight: normal; }
+
+fieldset {
+  border: 0; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+img {
+  border: 0;
+  vertical-align: top;
+  text-align: left; }
+
+ul, ol {
+  list-style: none; }
+
+p {
+  line-height: 1.43em; }
+
+/* TXT, LINKS, LINES, TITLES */
+a {
+  outline: none;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+a:visited {
+  text-decoration: none;
+  color: white; }
+
+::-webkit-scrollbar {
+  width: 12px; }
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
+
+#welcome {
+  position: absolute;
+  width: 1280px;
+  height: 720px;
+  background-color: #000000;
+  background-image: url("http://172.31.15.253/controlpanel/images/welcome.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 1280px 720px; }
+
+#top, #welcome_bg_top, #welcome_top {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  height: 222px; }
+
+#welcome_bg_top {
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8), transparent);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.8), transparent);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.8), transparent);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+  /* Standard syntax (must be last) */ }
+
+#welcome_top {
+  font-family: frutigerrom;
+  color: #ffffff;
+  padding-top: 32px;
+  padding-left: 45px;
+  padding-right: 45px; }
+
+#guest_wrapper {
+  float: left;
+  text-align: left; }
+
+#guest {
+  font-size: 1.7rem;
+  margin-bottom: 15px; }
+
+#room_wrapper {
+  position: relative; }
+
+#room {
+  float: left;
+  font-size: 1.9rem;
+  margin-right: 15px; }
+
+#forecast_wrapper {
+  float: left;
+  font-family: frutigerrom;
+  border-left: 1px #ffffff solid;
+  padding-left: 15px; }
+
+#forecast {
+  font-size: 1.1rem; }
+
+#time {
+  padding-left: 7.5px;
+  border-left: 1px #ffffff solid; }
+
+#logo {
+  float: right;
+  width: 138px;
+  height: 100px;
+  background-image: url("images/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+#bottom, #welcome_bg_bottom, #welcome_bottom {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  height: 222px; }
+
+#welcome_bg_bottom {
+  background-color: rgba(50, 50, 50, 0.9); }
+
+#welcome_bottom {
+  color: #ffffff; }
+
+#hotel_wrapper {
+  padding-top: 32px;
+  padding-left: 45px;
+  padding-right: 45px;
+  height: 256px; }
+
+#hotel {
+  display: block;
+  font-size: 1.7rem;
+  text-align: left;
+  margin-bottom: 30px; }
+
+#guest_bottom {
+  display: block;
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 60px; }
+
+#press_enter {
+  display: block;
+  font-size: 1.7rem;
+  text-align: left; }
+
+/*############################################################################*/
+#single-i {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1280px;
+  height: 720px;
+  background-color: #000000;
+  background-image: url("http://iptv.cic.net.id/iptvman/uploads/s_item.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 1280px 720px; }
+
+#single-i_title, #single-l_title {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1190px;
+  padding: 32px 45px;
+  height: 111px; }
+
+#title_content {
+  /*    -webkit-box-sizing: content-box; 
+      -moz-box-sizing: content-box;
+      box-sizing: content-box; */
+  /*-webkit-box-sizing: inherit;*/
+  display: block;
+  /*margin: $icon-height $icon-width;*/
+  padding: 45px;
+  width: 1190px;
+  height: 21px;
+  background-color: rgba(255, 88, 0, 0.9);
+  text-align: left;
+  font-size: 1.9rem;
+  font-family: frutigerbold;
+  box-shadow: 5px 5px 5px #000000;
+  color: #ffffff; }
+
+#single-i_main, #single-l_main {
+  position: absolute;
+  top: 175px;
+  left: 0px;
+  width: 1190px;
+  height: 449px;
+  padding: 32px 45px 64px 45px; }
+
+#single-i-main_content, #single-l-main_content {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 1190px;
+  height: 449px;
+  box-shadow: 5px 5px 5px #000000; }
+
+#single-i_desc {
+  position: relative;
+  float: left;
+  width: 795px;
+  height: 449px;
+  background-color: rgba(255, 88, 0, 0.9);
+  overflow-x: hidden;
+  overflow-y: auto; }
+  #single-i_desc #desc {
+    margin: 30px;
+    text-align: left;
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    color: #ffffff; }
+
+#single-i_pict {
+  position: relative;
+  float: left;
+  width: 395px;
+  height: 449px;
+  background-color: rgba(255, 88, 0, 0.9);
+  overflow: hidden; }
+  #single-i_pict img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+/*############################################################################*/
+#single-l {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1280px;
+  height: 720px;
+  background-color: #000000;
+  background-image: url("http://iptv.cic.net.id/iptvman/uploads/s_list.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 1280px 720px; }
+
+#single-l-main_content {
+  box-shadow: none; }
+
+#single-l_list {
+  position: relative;
+  float: left;
+  margin-right: 60px;
+  width: 471px;
+  height: 449px;
+  background-color: rgba(255, 88, 0, 0.9);
+  /*background-color: red;*/
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-shadow: 5px 5px 5px #000000;
+  /*font-family: frutigerrom;*/ }
+  #single-l_list div.list_item {
+    position: relative;
+    margin: 30px;
+    display: block;
+    width: 411px;
+    height: 105px;
+    /*background-color: blue;*/ }
+    #single-l_list div.list_item.active {
+      /*border: 4px solid #ff5800;*/ }
+      #single-l_list div.list_item.active img.bg_title {
+        /*                 top: -4px;
+                         left: -4px;
+                         right: -4px;
+                         bottom: -4px;*/
+        width: 411px;
+        height: 105px;
+        border: 4px solid #007363; }
+      #single-l_list div.list_item.active .sub_title {
+        /*position: relative;*/
+        width: 403px;
+        top: 4px;
+        left: 4px;
+        right: 4px;
+        background: #ff5800;
+        /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(right, #ff5800, rgba(255, 255, 255, 0.4));
+        background: -o-linear-gradient(left, #ff5800, rgba(255, 255, 255, 0.4));
+        background: -moz-linear-gradient(left, #ff5800, rgba(255, 255, 255, 0.4));
+        background: linear-gradient(to left, #ff5800, rgba(255, 255, 255, 0.4));
+        -moz-box-shadow: inset 0 0 10px #000000;
+        -webkit-box-shadow: inset 0 0 10px #000000;
+        box-shadow: inset 0 0 10px #000000;
+        color: #eeeeee; }
+    #single-l_list div.list_item img.bg_title {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      width: 411px;
+      height: 105px;
+      z-index: 100; }
+    #single-l_list div.list_item .sub_title {
+      /*position:absolute;*/
+      position: relative;
+      display: block;
+      padding-right: 4px;
+      width: 411px -4px;
+      height: 35px;
+      background: #ffffff;
+      /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), white);
+      background: -o-linear-gradient(right, rgba(255, 255, 255, 0), white);
+      background: -moz-linear-gradient(right, rgba(255, 255, 255, 0), white);
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+      text-align: right;
+      color: #555555;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      z-index: 100; }
+
+#single-l_desc {
+  position: relative;
+  float: left;
+  width: 659px;
+  height: 449px;
+  background-color: rgba(255, 88, 0, 0.9);
+  /*background-color: green;*/
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-shadow: 5px 5px 5px #000000; }
+  #single-l_desc #desc {
+    margin: 30px;
+    text-align: left;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    color: #ffffff; }
+
+/*############################################################################*/
+#double-l {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 1280px;
+  height: 720px;
+  background: url("http://iptv.cic.net.id/iptvman/uploads/d_list.png") no-repeat fixed top left; }
+
+#d-list_top {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  left: 0px;
+  height: 111px;
+  font-family: frutigerrom;
+  color: #ffffff;
+  padding-top: 32px;
+  padding-left: 45px;
+  padding-right: 45px; }
+
+#d-list_bottom {
+  position: absolute;
+  top: 111px;
+  right: 0px;
+  left: 0px;
+  height: 609px;
+  /*background-color: red;*/ }
+
+#d-list_bottom_container {
+  position: relative;
+  margin: 30px 64px 64px 64px;
+  width: 1152px;
+  height: 515px;
+  background-color: rgba(0, 0, 0, 0.8);
+  /*font-size: 3rem;*/
+  color: white; }
+  #d-list_bottom_container #left_container {
+    position: absolute;
+    left: 0px;
+    width: 400px;
+    height: inherit;
+    /*height: $height - $mini2-height - ($space + $icon2-height );*/ }
+  #d-list_bottom_container #mid_container {
+    position: absolute;
+    left: 400px;
+    width: 300px;
+    height: inherit;
+    /*height: $height - $mini2-height - ($space + $icon2-height );*/ }
+  #d-list_bottom_container #right_container {
+    position: absolute;
+    left: 700px;
+    width: 452px;
+    height: inherit;
+    /*height: $height - $mini2-height - ($space + $icon2-height );*/ }
+
+#left_title {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  text-align: left;
+  margin-top: 150px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 30px; }
+
+#left_list {
+  font-family: frutigerbold;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  padding-left: 60px;
+  padding-right: 60px; }
+  #left_list a.list_item {
+    display: block;
+    color: #ffffff;
+    padding: 5px 0px 7px 30px;
+    border-bottom: 1px solid #555555;
+    text-align: left; }
+    #left_list a.list_item:focus, #left_list a.list_item.active {
+      color: #555555;
+      background-color: #ffffff; }
+
+#right_title {
+  font-size: 2rem;
+  line-height: 2rem;
+  text-align: left;
+  margin: 30px 15px 15px 15px; }
+
+#right_list {
+  padding: 0px 5px 15px 15px;
+  margin-right: 15px;
+  height: 423px;
+  overflow-x: hidden;
+  overflow-y: auto; }
+  #right_list div.list_item {
+    position: relative;
+    border-bottom: 1px solid #555555;
+    padding-top: 15px;
+    padding-bottom: 60px; }
+    #right_list div.list_item .list_title {
+      position: relative;
+      /*font-family: frutigerbold;*/
+      font-size: 1.4rem;
+      text-align: left;
+      margin-bottom: 15px; }
+    #right_list div.list_item .list_desc_cont {
+      position: relative; }
+      #right_list div.list_item .list_desc_cont:after {
+        content: "";
+        display: block;
+        clear: both; }
+    #right_list div.list_item .list_left {
+      /*            position: absolute;
+                  left: 0px;*/
+      float: left;
+      width: 250px; }
+    #right_list div.list_item .list_right {
+      /*            position: absolute;
+                  right: 0px;*/
+      float: right;
+      width: 150px; }
+    #right_list div.list_item .list_desc {
+      font-size: 0.9rem;
+      text-align: left; }
+    #right_list div.list_item .list_curr {
+      font-size: 1.4rem;
+      line-height: 1.4rem;
+      text-align: right;
+      margin-bottom: 5px; }
+    #right_list div.list_item .list_val {
+      font-size: 1.3rem;
+      line-height: 1.3rem;
+      text-align: right; }
+  #right_list::-webkit-scrollbar {
+    width: 5px; }
+  #right_list::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(250, 88, 0, 0.3);
+    border-radius: 10px; }
+  #right_list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #fa5800;
+    -webkit-box-shadow: inset 0 0 6px rgba(250, 88, 0, 0.5); }
+
+/*############################################################################*/
+#back {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 10px; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,535 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 10, 2017, 11:01:34 AM
+    Author     : Hendrik
+*/
+@import 'default';
+
+$width: 1280px;
+$height: 720px;
+$mini-space: 15px;
+$space: 30px;
+$left-side: $width/3;
+$right-side: $width*2/3;
+$mini-width: 395px;
+$mini2-width: $mini-width/2;
+$mini-height: 222px;
+$mini2-height: $mini-height/2;
+$icon-width: 45px;
+$icon2-width: $icon-width * 2;
+$icon-height: 32px;
+$icon2-height: $icon-height * 2;
+// 1. Untuk nomor channel dan judul channel
+
+$url: "http://iptv.cic.net.id/iptvman/uploads/";
+
+$list-width: 411px;
+$list-height: 105px;
+$d_list-width: $width - ($icon2-height* 2);
+
+.harris{
+
+}
+#welcome{
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: #000000;
+    background-image: url("#{$url}welcome.png") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: $width $height ;
+    
+    
+}
+#top{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: $mini-height;
+}
+#welcome_bg_top{
+    @extend #top;
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.8), rgba(0,0,0,0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, rgba(0,0,0,0.8), rgba(0,0,0,0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, rgba(0,0,0,0.8), rgba(0,0,0,0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0)); /* Standard syntax (must be last) */
+}
+#welcome_top{
+    @extend #top;
+    font-family: frutigerrom;
+    color: #ffffff;
+    padding-top: $icon-height;
+    padding-left: $icon-width;
+    padding-right: $icon-width;
+}
+#guest_wrapper{
+    float: left;
+    text-align: left;
+}
+#guest{
+    font-size: 1.7rem;
+    margin-bottom: $mini-space;
+}
+#room_wrapper{
+    position: relative;
+}
+#room{
+    float: left;
+    font-size: 1.9rem;
+    margin-right: $mini-space;
+}
+#forecast_wrapper{
+    float: left;
+    font-family: frutigerrom;
+    border-left: 1px #ffffff solid;
+    padding-left: $mini-space;
+}
+#forecast{
+    font-size: 1.1rem;
+}
+#date{
+    
+}
+#time{
+    padding-left: $mini-space/2;
+    border-left: 1px #ffffff solid;
+}
+#logo{
+    float:right;
+    width: 138px;
+    height: 100px;
+    background-image: url("images/logo.png") ;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#bottom{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    height: $mini-height;
+}
+#welcome_bg_bottom{
+    @extend #bottom;
+    background-color: rgba(50,50,50,0.9); 
+    
+}
+#welcome_bottom{
+    @extend #bottom;
+    color: #ffffff;
+}
+#hotel_wrapper{
+    padding-top: $icon-height;
+    padding-left: $icon-width;
+    padding-right: $icon-width;
+    height: ($height/5*2) - $icon-height;
+}
+#hotel{
+    display: block;
+    font-size: 1.7rem;
+    text-align: left;
+    margin-bottom: $space;  
+}
+#guest_bottom{
+    display: block;
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: $space*2;  
+}
+#press_enter{
+    display: block;
+    font-size:1.7rem;
+    text-align: left;
+}
+
+/*############################################################################*/
+#single-i{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: $width;
+    height: $height;
+    background-color: #000000;
+    background-image: url("#{$url}s_item.png") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: $width $height ;
+}
+#single-i_title{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: $width - ($icon-width *2);
+    padding: $icon-height $icon-width;
+    height: $mini2-height ;
+}
+#title_content{
+/*    -webkit-box-sizing: content-box; 
+    -moz-box-sizing: content-box;
+    box-sizing: content-box; */
+    /*-webkit-box-sizing: inherit;*/ 
+    display: block;
+    /*margin: $icon-height $icon-width;*/
+    padding: $icon-width;
+    width: $width - ($icon-width *2);
+    height: $mini2-height - ($icon-width *2) ;
+    background-color: rgba(255,88,0, 0.9);
+    text-align: left;
+    font-size: 1.9rem;
+    font-family: frutigerbold;
+     box-shadow: 5px 5px 5px #000000;
+    color: #ffffff;
+}
+#single-i_main{
+    position: absolute;
+    top: $mini2-height + ($icon-height *2);
+    left: 0px;
+    width: $width - ($icon-width *2);
+    height: $height - ( $mini2-height + ($icon-height *2)) - ($icon-height * 3);
+    padding: $icon-height $icon-width $icon-height*2 $icon-width ;
+}
+#single-i-main_content{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: $width - ($icon-width *2);
+    height: $height - ( $mini2-height + ($icon-height *2)) - ($icon-height * 3);
+     box-shadow: 5px 5px 5px #000000;
+}
+#single-i_desc{
+    position:relative;
+    float: left;
+    width: $width - ($icon-width *2) - $mini-width;
+    height: $height - ( $mini2-height + ($icon-height *2)) - ($icon-height * 3);
+    background-color: rgba(255,88,0, 0.9);
+    overflow-x: hidden;
+    overflow-y: auto;
+    #desc{
+        margin: $space;
+        text-align: left;
+        font-size: 1.3rem;
+        line-height: 1.4rem;
+        color: #ffffff;
+    }
+}
+#single-i_pict{
+    position:relative;
+    float: left;
+    width: $mini-width;
+    height: $height - ( $mini2-height + ($icon-height *2)) - ($icon-height * 3);
+    background-color:rgba(255,88,0, 0.9);
+    overflow: hidden;
+    img{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 100%;
+        width: auto;
+        -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+    }
+}
+
+
+/*############################################################################*/
+#single-l{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: $width;
+    height: $height;
+    background-color: #000000;
+    background-image: url("#{$url}s_list.png") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: $width $height ;
+}
+#single-l_title{
+    @extend #single-i_title;
+}
+#single-l_main{
+    @extend #single-i_main;
+}
+#single-l-main_content{
+    @extend #single-i-main_content;
+    box-shadow: none;
+}
+
+#single-l_list{
+    position:relative;
+    float: left;
+    margin-right: $space*2;
+    width: $list-width+ $space*2;
+    height: $height - ( $mini2-height + ($icon-height *2)) - ($icon-height * 3);
+    background-color: rgba(255,88,0, 0.9);
+    /*background-color: red;*/
+    overflow-x: hidden;
+    overflow-y: auto;
+     box-shadow: 5px 5px 5px #000000;
+     /*font-family: frutigerrom;*/
+     div.list_item{
+         position: relative;
+         margin: $space;
+         display: block;
+         width: $list-width;
+         height: $list-height;
+         /*background-color: blue;*/
+         &.active{
+             /*border: 4px solid #ff5800;*/
+             img.bg_title{
+/*                 top: -4px;
+                 left: -4px;
+                 right: -4px;
+                 bottom: -4px;*/
+                width: $list-width ;
+                height: $list-height;
+                border: 4px solid #007363;
+             }
+             .sub_title{
+                /*position: relative;*/
+                width: $list-width - 8px;
+                top: 4px;
+                left: 4px;
+                right: 4px;
+                background: #ff5800; /* For browsers that do not support gradients */
+                background: -webkit-linear-gradient(right,rgba(255,88,0,1),rgba(255,255,255,0.4)); //Safari 5.1-6
+                background: -o-linear-gradient(left,rgba(255,88,0,1),rgba(255,255,255,0.4)); //Opera 11.1-12
+                background: -moz-linear-gradient(left,rgba(255,88,0,1),rgba(255,255,255,0.4)); //Fx 3.6-15
+                background: linear-gradient(to left, rgba(255,88,0,1), rgba(255,255,255,0.4)); //Standard
+                -moz-box-shadow:    inset 0 0 10px #000000;
+                -webkit-box-shadow: inset 0 0 10px #000000;
+                box-shadow:         inset 0 0 10px #000000;
+                color: #eeeeee;
+             }
+         }
+         img.bg_title{
+             position:absolute;
+             top: 0px;
+             left:0px;
+             right:0px;
+             bottom:0px;
+             width: $list-width;
+             height: $list-height;
+             z-index: 100;
+         }
+         .sub_title{
+             /*position:absolute;*/
+             position: relative;
+            display: block;
+            padding-right: 4px;
+            width: $list-width -4px;
+            height: $list-height/3; 
+            background: #ffffff; /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(left,rgba(255,255,255,0),rgba(255,255,255,1)); //Safari 5.1-6
+            background: -o-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1)); //Opera 11.1-12
+            background: -moz-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1)); //Fx 3.6-15
+            background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)); //Standard
+            text-align: right;
+            color: #555555;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            z-index: 100;
+         }
+     }
+}
+
+#single-l_desc{
+     position:relative;
+    float: left;
+    width: $width - ($icon-width *2) - ($list-width+ $space*2) -$space*2;
+    height: $height - ( $mini2-height + ($icon-height *2)) - ($icon-height * 3);
+    background-color: rgba(255,88,0, 0.9);
+    /*background-color: green;*/
+    overflow-x: hidden;
+    overflow-y: auto;
+     box-shadow: 5px 5px 5px #000000;
+    #desc{
+        margin: $space;
+        text-align: left;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        color: #ffffff;
+    }
+}
+
+/*############################################################################*/
+#double-l{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: $width;
+    height: $height;
+    background:  url("#{$url}d_list.png")  no-repeat fixed top left;
+    
+}
+#d-list_top{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    left: 0px;
+    height: $mini2-height;
+    font-family: frutigerrom;
+    color: #ffffff;
+    padding-top: $icon-height;
+    padding-left: $icon-width;
+    padding-right: $icon-width;
+}
+#d-list_bottom{
+    position: absolute;
+    top: $mini2-height;
+    right: 0px;
+    left: 0px;
+    height: $height - $mini2-height;
+    /*background-color: red;*/
+}
+#d-list_bottom_container{
+    position: relative;
+    margin: $space $icon2-height  $icon2-height  $icon2-height ;
+    width: $width - ($icon2-height* 2);
+    height: $height - $mini2-height - ($space + $icon2-height );
+    background-color: rgba(0,0,0,0.8);
+    /*font-size: 3rem;*/
+    color: white;
+    #left_container{
+        position: absolute;
+        left: 0px;
+        width: 400px;
+        height: inherit;
+        /*height: $height - $mini2-height - ($space + $icon2-height );*/
+    }
+    #mid_container{
+        position: absolute;
+        left: 400px;
+        width: 300px;
+        height: inherit;
+        /*height: $height - $mini2-height - ($space + $icon2-height );*/
+    }
+    #right_container{
+        position: absolute;
+        left: 700px;
+        width: 452px;
+        height: inherit;
+        /*height: $height - $mini2-height - ($space + $icon2-height );*/
+    }
+}
+#left_title{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    text-align: left;
+    margin-top: 150px;
+    margin-left: $space*2;
+    margin-right: $space*2;
+    margin-bottom: $space;
+}
+#left_list{
+    font-family: frutigerbold;
+    font-size:1.2rem;
+    line-height: 1.2rem;
+    padding-left: $space*2;
+    padding-right: $space*2;
+    a.list_item{
+        display: block;
+        color: #ffffff;
+        padding: 5px 0px 7px $space;
+        border-bottom: 1px solid #555555;
+        text-align: left;
+        &:focus, &.active{
+            color: #555555;
+            background-color: #ffffff;
+        }
+    }
+}
+
+#right_title{
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: left;
+    $height: $icon-height;
+    margin: $space $mini-space $mini-space $mini-space;
+}
+#right_list{
+    padding: 0px 5px $mini-space $mini-space;
+    margin-right: $mini-space;
+    height: $height - $mini2-height - ($space + $icon2-height ) - ($icon-height + $space + $mini-space *2);
+    overflow-x: hidden;
+    overflow-y: auto;
+    div.list_item{
+        position: relative;
+        border-bottom: 1px solid #555555; 
+        padding-top: $mini-space;
+        padding-bottom: $space *2;
+        .list_title{
+            position: relative;
+            /*font-family: frutigerbold;*/
+            font-size: 1.4rem;
+            text-align: left;
+            margin-bottom: $mini-space;
+            
+        }
+        .list_desc_cont{
+            position: relative;
+            &:after { 
+                content:""; 
+                display:block; 
+                clear:both; 
+            }
+        }
+        .list_left{
+/*            position: absolute;
+            left: 0px;*/
+            float: left;
+            width: 250px;
+        }
+        .list_right{
+/*            position: absolute;
+            right: 0px;*/
+            float: right;
+            width: 150px;
+        }
+        .list_desc{
+            font-size: 0.9rem;
+            text-align: left;
+        }
+        .list_curr{
+            font-size: 1.4rem;
+            line-height: 1.4rem;
+            text-align: right;
+            margin-bottom: 5px;
+        }
+        .list_val{
+            font-size: 1.3rem;
+            line-height: 1.3rem;
+            text-align: right;
+        }
+        
+    }
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(250,88,0,0.3); 
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: rgba(250,88,0,1);
+        -webkit-box-shadow: inset 0 0 6px rgba(250,88,0,0.5); 
+    }
+}
+    
+/*############################################################################*/
+#back{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin:10px;
+}

@@ -1,0 +1,14 @@
+<service>
+    <setup>
+          <versionNumber>1</versionNumber>
+          <modelName>50UR761H0TA</modelName>
+          <priority>NORMAL</priority>
+          <content>
+              <type>SPLASH_IMAGE</type>
+              <data>splashOHAGB.bmp</data>
+              <frequency>0</frequency>
+              <programNum>0</programNum>
+              <cTag>0</cTag>
+          </content>
+    </setup>
+</service>

@@ -1,0 +1,316 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 10, 2017, 11:01:34 AM
+    Author     : Hendrik
+*/
+@import 'default';
+
+$width: 1280px;
+$height: 720px;
+$space: 30px;
+$left-side: $width/3;
+$right-side: $width*2/3;
+$mini-width: 395px;
+$mini-height: 222px;
+$icon-width: 45px;
+$icon-height: 32px;
+// 1. Untuk nomor channel dan judul channel
+
+@font-face {
+    font-family: vaground;
+    src: url(../fonts/VAGRoundedBT.ttf);
+}
+@font-face {
+    font-family: frutigerrom;
+    src: url(../fonts/FrutigerLTStd55Roman.ttf);
+}
+
+@font-face {
+    font-family: frutigerbold;
+    src: url(../fonts/FrutigerLTStd65Bold.ttf);
+}
+@font-face {
+    font-family: frutigerlight;
+    src: url(../fonts/FrutigerLTStd45Light.ttf);
+}
+
+
+#ch_info_cont{
+    position: absolute;
+    display: inline-block;
+    top: $space;
+    left: 0px;
+    text-align: left;
+    color: #ffffff;
+    font-family: vaground;
+}
+#ch_number{
+    font-size: 3em;
+    line-height: 1.5em;
+    width: $space * 3;
+    padding: 0px $space 0px $space;
+    background: #007363;
+    border-bottom: (1px) solid #ffffff;
+    border-top-right-radius: $space / 5;
+    text-align: right;
+}
+#ch_title{
+    float: left;
+    font-size: 2em;
+    line-height: 1.2em;
+    white-space: nowrap;
+    background: #007363;
+    min-width: $space * 3;
+    padding: 0px $space 0px ($space*2);
+    border-top-right-radius: $space / 5;
+    border-bottom-right-radius: $space / 5;
+}
+
+// END OF 1
+
+// 2. Untuk Channel List
+#ch_list_cont{
+    position: absolute;
+    top: $space;
+    right: 0px;
+    display: none;
+}
+#c_l_top{
+    font-family: frutigerbold;
+    font-size: 2rem;
+    line-height: 1.9rem;
+    text-align: center; 
+    background-color: #007363;
+    color: white;
+    vertical-align: center;
+    padding: 0px  $space  $space $space ;
+    border-top-left-radius: $space /3;
+}
+#c_l_main{
+    font-family: frutigerrom;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    text-align: left;
+    display: block;
+    
+}
+#channel_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 350px;
+    background-color: #f1f1f1;
+    border-bottom-left-radius: $space /3;
+    li{
+        display: block;
+        height: 50px;
+        a {
+            padding-left: 10px;
+            text-decoration: none;
+            display: block;
+            overflow:hidden;
+            white-space: nowrap;
+            color: #000;
+            height:50px;
+            min-width: 340px;
+            max-width:340px;
+            vertical-align: top;
+            -webkit-transition: max-width 2s; /* Safari */
+            transition: max-width 2s;
+            &:focus {
+                display: inline-block;
+                min-width:340px;
+                width: auto;
+                max-width: 1000px;
+                color: white;
+                background-color: #007363;
+                opacity: 0.8;
+                overflow:visible;
+                border-bottom-left-radius: $space /3;
+
+            }
+            &:hover:not(:focus) {
+                background-color: #555;
+                color: white;
+                border-bottom-left-radius: $space /3;
+            }
+        }
+    }
+}
+
+// END OF 2
+
+
+// 4. Untuk Fnb
+.fnb-container{
+    position: relative;
+}
+#left-side{
+   position:absolute;
+   top: 0px;
+   left:0px;
+   width: $left-side;
+   height: $height;
+}
+#right-side{
+   position:absolute;
+   top: 0px;
+   left: $left-side;
+   width: $right-side;
+   height: $height - $space * 3;;
+   padding-top: $space * 3;
+   background-color: blue;
+}
+.upper-cont{
+    width: $left-side;
+    height: $space * 2;
+   background-color: red;
+}
+.middle-cont{
+    position:absolute;
+    width: $left-side;
+    height: $mini-height + $space*2;
+    top: $space*2;
+    overflow:hidden; 
+}
+.bottom-cont{
+    position: absolute;
+    width: $left-side;
+    /*total height - upper height - middle height*/
+    height: $height - $space* 2 - ($mini-height + $space*2); 
+    top: $space* 2 + ($mini-height + $space*2);
+    background-color: red;
+}
+.watch-tv{
+    position:relative;
+    margin:$space auto;
+    width: $mini-width;
+    height: $mini-height;
+    box-shadow: 0 0 0 100px #ff0000; /* !!! */
+    
+}
+.fnb-cat{
+    float: left;
+    background: yellow;
+    font-size: 2.5rem;
+    border-radius: $space;     
+    margin: $space/2;
+    a{
+        text-decoration: none;
+        display: block;
+        padding: $space;
+        &:focus{
+            background-color: green;
+            border-radius: $space/2; 
+            color: white;
+        }
+        &:hover:not(:focus) {
+            font-weight: bold;
+        }
+    }
+}
+
+// 5. Press Info
+#info-cont{
+    display: none;
+}
+#legend{
+    position: absolute;
+    bottom: $space;
+    right: $space;
+    font-family: frutigerlight;
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    width: 800px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #ff5800;
+    border-radius: 5px;
+    padding: 5px;
+    
+}
+#info{
+    position: relative;
+    &:before{
+        content: '';
+        position: absolute;
+        display: inline-block;
+        float: left;
+        left: -$icon-width;
+        min-width: $icon-width;
+        height: $icon-height;
+        background-image: url('../../images/info.png') ;
+    }
+}
+#portal{
+    position: relative;
+    &:before{
+        content: '';
+        position: absolute;
+        display: inline-block;
+        float: left;
+        left: -$icon-width;
+        min-width: $icon-width;
+        height: $icon-height;
+        background-image: url('../../images/portal.png') ;
+    }
+}
+#close{
+    position: relative;
+    &:before{
+        content: '';
+        position: absolute;
+        display: inline-block;
+        float: left;
+        left: -$icon-width;
+        min-width: $icon-width;
+        height: $icon-height;
+        background-image: url('../../images/ok_2.png') ;
+    }
+}
+#list{
+    position: relative;
+    &:before{
+        content: '';
+        position: absolute;
+        display: inline-block;
+        float: left;
+        left: -$icon-width;
+        min-width: $icon-width;
+        height: $icon-height;
+        background-image: url('../../images/list.png') ;
+    }
+}
+#back{
+    position: relative;
+    &:before{
+        content: '';
+        position: absolute;
+        display: inline-block;
+        float: left;
+        left: -$icon-width;
+        min-width: $icon-width;
+        height: $icon-height;
+        background-image: url('../../images/back.png') ;
+    }
+}
+.separator{
+    border-left: 1px solid #ff5800;
+    margin: 0px 15px+$icon-width 0px 15px;
+}
+#log{
+    position:absolute;
+    top:30px;
+    display:inline;
+    text-align: center;
+    height: 100px;
+    line-height: 30px;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 10px;
+}
+
