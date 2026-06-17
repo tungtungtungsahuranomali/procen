@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
   $gambar = $_FILES['gambar']['name'];
   $storage = $_FILES['gambar']['tmp_name'];
 
-  $insert = "INSERT INTO service (link_gambar, judul_gambar) VALUES ('/images/picservices/$gambar', '$gambar')";
+  $insert = "INSERT INTO service (link_gambar, judul_gambar) VALUES ('http://192.168.30.4/controlpanel/images/picservices/$gambar', '$gambar')";
 
 //  $insert = "INSERT INTO service set link_gambar = 'http://192.168.30.4/controlpanel/images/picservices/$gambar'";
   $connectinsert = mysqli_query($koneksi, $insert);
@@ -155,6 +155,9 @@ if(isset($_POST['submit'])){
                   while($takedatapromotion = mysqli_fetch_array($connectdataservice)){
                     $idservice = $takedatapromotion['id_service'];
                     $judulgambar = $takedatapromotion['link_gambar'];
+                    $parsed = parse_url($judulgambar);
+                    $current_host = (isset($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'];
+                    $preview_url = $current_host . ($parsed['path'] ?? '');
                     ?>
 
                     <tr scope="row">
@@ -162,6 +165,9 @@ if(isset($_POST['submit'])){
                       <td class="pl-0"><?php echo $judulgambar; ?></td>
                       <td>
                         <a class="edit btn" href="deleteservice.php?idservice=<?php echo $idservice; ?>" style="background-color: red; color: white; font-weight: bolder;">Delete</a>
+                      </td>
+                      <td>
+                        <img src="<?php echo $preview_url; ?>" width="80" height="60" style="object-fit:cover;border-radius:4px;" onerror="this.style.display='none'">
                       </td>
                     </tr>
 

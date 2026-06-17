@@ -122,6 +122,9 @@ $connectdatareflexology = mysqli_query($koneksi, $datareflexology);
                     $idreflexology = $takedatareflexology['id'];
                     $judulgambar = $takedatareflexology['judul_gambar'];
                     $linkgambar = $takedatareflexology['link_gambar'];
+                    $parsed = parse_url($linkgambar);
+                    $current_host = (isset($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'];
+                    $preview_url = $current_host . ($parsed['path'] ?? '');
                     ?>
 
                     <tr scope="row">
@@ -129,7 +132,10 @@ $connectdatareflexology = mysqli_query($koneksi, $datareflexology);
                       <td class="pl-0"><?php echo $judulgambar; ?></td>
                       <td>
                         <a class="edit btn" href="deletereflexology.php?idreflexology=<?php echo $idreflexology; ?>" style="background-color: red; color: white; font-weight: bolder;">Delete</a>
-                        <a class= "btn btn-success" target="_blank" href="<?php echo $linkgambar; ?>">Preview</a>
+                        <a class= "btn btn-success" target="_blank" href="<?php echo $preview_url; ?>">Preview</a>
+                      </td>
+                      <td>
+                        <img src="<?php echo $preview_url; ?>" width="80" height="60" style="object-fit:cover;border-radius:4px;" onerror="this.style.display='none'">
                       </td>
                     </tr>
                 <?php 

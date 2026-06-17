@@ -15,11 +15,11 @@ if(isset($_POST['submit'])){
   $storage = $_FILES['gambar']['tmp_name'];
   $kategori = $_POST['kategori'];
 
-  $insert = "INSERT INTO fasilitas set gambar = '/images/picfasilitas/$gambar', judul_gambar = '$gambar', kategori = '$kategori'";
+  $insert = "INSERT INTO fasilitas set gambar = 'http://192.168.30.4/controlpanel/images/picfasilitas/$gambar', judul_gambar = '$gambar', kategori = '$kategori'";
 
   $connectinsert = mysqli_query($koneksi, $insert);
     if(move_uploaded_file($storage, "./images/picfasilitas/".$gambar)){
-      if($insert){
+      if($connectinsert){
         header("location:facilities.php");
       }else{
         ?>
@@ -166,6 +166,7 @@ if(isset($_POST['submit'])){
                   <th scope="col">Title</th>
                   <th scope="col">Kategori</th>
                   <th scope="col">Action</th>
+                  <th scope="col">Preview</th>
                 </tr>
               </thead>
 
@@ -178,6 +179,9 @@ if(isset($_POST['submit'])){
                     $idfasilitas = $takedatafasilitas['id_gambar'];
                     $judulgambar = $takedatafasilitas['gambar'];
                     $kategorifasilitas = $takedatafasilitas['kategori'];
+                    $parsed = parse_url($judulgambar);
+                    $current_host = (isset($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'];
+                    $preview_url = $current_host . ($parsed['path'] ?? '');
                     ?>
 
                     <tr scope="row">
@@ -185,6 +189,9 @@ if(isset($_POST['submit'])){
                       <td class="pl-0"><?php echo $kategorifasilitas; ?></td>
                       <td>
                         <a class="edit btn" href="deletefasilitas.php?idfasilitas=<?php echo $idfasilitas; ?>" style="background-color: red; color: white; font-weight: bolder;">Delete</a>
+                      </td>
+                      <td>
+                        <img src="<?php echo $preview_url; ?>" width="80" height="60" style="object-fit:cover;border-radius:4px;" onerror="this.style.display='none'">
                       </td>
                     </tr>
 

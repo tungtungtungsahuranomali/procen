@@ -1,0 +1,9 @@
+# Ignore all zip files except example
+*.zip
+!CONTOHPACKAGE.zip
+
+# Ignore binary/system files
+system/splashOHAGB.bmp
+
+# Keep example config
+application/xait.xml.example
